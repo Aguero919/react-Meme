@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Karla");
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Karla", sans-serif;
+}
+
+:root {
+    --font-wt-lg: 700;
+    --font-wt-med: 400;
+
+    --font-sz: 1.75rem;
+    --font-sz-med: 1.35rem;
+    --font-sz-sm: 1rem;
+    --clr-wht: rgb(197, 193, 193);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
+
+.navlogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+.trollface {
+    width: 3rem;
+    margin-right: 1rem;
+}
+.navlogo > h2 {
+    color: white;
+    font-weight: var(--font-wt-lg);
+    font-size: var(--font-sz);
+}
+
+.nav-subject > h3 {
+    color: white;
+    margin-right: 3rem;
+}
+
+@media (max-width:576px) {
+    .trollface {
+        width: 2.5rem;
+    }
+    .navlogo > h2 {
+        font-size: var(--font-sz-med);
+    }
+    .nav-subject > h3 {
+        font-size: var(--font-sz-sm);
+        margin-right: var(--font-sz-sm);
+    }
+}
+
+/* FORM */
+.form {
+    margin-top: 4rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 15rem 15rem;
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+}
+input[type="text"] {
+    padding: 0.25rem;
+    border-radius: 0.20rem;
+    outline: none;
+    border: 1.5px solid gray;
+    text-indent: 0
+ }
+ #btn {
+    padding: 0.75rem;
+    border-radius: 0.20rem;
+    outline: none;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 90%);
+    color: white;
+    border: 0.5px solid white;
+    grid-column: 1 / -1;
+    cursor: pointer;
+}
+
+/* MEME IMAGE */
+.meme-container {
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.meme-img {
+    max-width: 50%;
+    max-height: 50rem;
+    border-radius: 0.15rem;
+}
+
+.text-top {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%);
+    color: var(--clr-wht);
+    font-weight: var(--font-wt-lg);
+    font-size: var(--font-sz);
+}
+.text-bottom {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%);
+    color: var(--clr-wht);
+    font-weight: var(--font-wt-lg);
+    font-size: var(--font-sz);
+}
